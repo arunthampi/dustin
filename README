@@ -1,3 +1,6 @@
+Introduction
+============
+
 Dustin is a WebHook endpoint which will translate Tender (http://www.tenderapp.com) discussions into GitHub (http://www.github.com) issues. Dustin is named after Dustin Hoffman from the 1991 movie Hook. (Lame I know, but it's past midnight and I wanted to ship today)
 
 It's primarily meant to be deployed as a Heroku app for your own personal needs.
