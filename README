@@ -1,3 +1,27 @@
-Dustin is a WebHook endpoint which will translate Tender (http://www.tenderapp.com) discussions into GitHub (http://www.github.com) issues.
+Dustin is a WebHook endpoint which will translate Tender (http://www.tenderapp.com) discussions into GitHub (http://www.github.com) issues. Dustin is named after Dustin Hoffman from the 1991 movie Hook. (Lame I know, but it's past midnight and I wanted to ship today)
 
-It's primarily meant to be deployed as a Heroku app.
+It's primarily meant to be deployed as a Heroku app for your own personal needs.
+
+Instructions to deploy to Heroku
+--------------------------------
+
+1. Clone the Dustin repository: git clone git://github.com/arunthampi/dustin.git
+
+2. Install the heroku gem: gem install heroku
+
+3. Create a new Heroku App: heroku create my_hooks (The app will then be created at http://my_hooks.heroku.com)
+
+4. Dustin needs three environment variables set up: Your GitHub username, your GitHub API Token (available at https://github.com/account) and the repository you want to associate with your TenderApp account.
+
+Set them like this: heroku config:add repo=Mclovin-s-Great-App username=arunthampi token=abcdef
+
+5. Deploy to heroku: git push heroku master
+
+6. Goto your TenderApp settings page for webhooks: (E.g. http://mclovins-great-product.tenderapp.com/settings/webhooks). 
+
+  6.1 Create a new webhook and set the URL to be http://my_hooks.heroku.com/dustin/hook
+  
+Voila! All discussions categorized as problems, come up as issues on GitHub issues.
+
+You can try this out by creating discussions at http://mclovins-great-product.tenderapp.com/discussions and looking at http://github.com/arunthampi/Mclovin-s-Great-App/issues#list for the corresponding GitHub issue. [Please note: my TenderApp account is only valid for 30 days from 7-Jan-2010, so no guarantees this will work in future.]
+
