@@ -8,7 +8,7 @@ require 'curb'
 @@token = ENV['token']
 
 post '/dustin/hook' do
-  body = JSON.parse(params[:body] || '{}')
+  body = JSON.parse(request.body.read || '{}')
   
   unless body.empty?
     author = body['author_name']
