@@ -1,0 +1,3 @@
+Dustin is a WebHook endpoint which will translate Tender (http://www.tenderapp.com) discussions into GitHub (http://www.github.com) issues.
+
+It's primarily meant to be deployed as a Heroku app.
