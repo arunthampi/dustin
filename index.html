@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>arunthampi/dustin @ GitHub</title>
+	
+	<style type="text/css">
+		body {
+  		margin-top: 1.0em;
+  		background-color: #ffffff;
+		  font-family: "Helvetica,Arial,FreeSans"; 
+  		color: #000000;
+    }
+    #container {
+      margin: 0 auto;
+      width: 700px;
+    }
+		h1 { font-size: 3.8em; color: #000000; margin-bottom: 3px; }
+		h1 .small { font-size: 0.4em; }
+		h1 a { text-decoration: none }
+		h2 { font-size: 1.5em; color: #000000; }
+    h3 { text-align: center; color: #000000; }
+    a { color: #000000; }
+    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+    .download { float: right; }
+		pre { background: #000; color: #fff; padding: 15px;}
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .footer { text-align:center; padding-top:30px; font-style: italic; }
+	</style>
+	
+</head>
+
+<body>
+  <a href="http://github.com/arunthampi/dustin"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+  
+  <div id="container">
+
+    <div class="download">
+      <a href="http://github.com/arunthampi/dustin/zipball/master">
+        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+      <a href="http://github.com/arunthampi/dustin/tarball/master">
+        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+    </div>
+      
+    <h1><a href="http://github.com/arunthampi/dustin">dustin</a> 
+      <span class="small">by <a href="http://github.com/arunthampi">arunthampi</a></span></h1>
+
+    <div class="description">
+      A WebHook endpoint which translates TenderApp discussions to GitHub issues.
+    </div>
+
+    <h2>Dependencies</h2>
+<p>json --version 1.1.9
+sinatra --version 0.9.4
+curb --version 0.6.2.1</p>
+<h2>Install</h2>
+<p><h1>Introduction</h1>
+
+<p>Dustin is a WebHook endpoint which will translate Tender (http://www.tenderapp.com) discussions into GitHub (http://www.github.com) issues. Dustin is named after Dustin Hoffman from the 1991 movie Hook. (Lame I know, but it's past midnight and I wanted to ship today)</p>
+
+<p>It's primarily meant to be deployed as a Heroku app for your own personal needs.</p>
+
+<h2>Instructions to deploy to Heroku</h2>
+
+<ul>
+
+<li>Clone the Dustin repository: git clone git://github.com/arunthampi/dustin.git</li>
+
+<li>Install the heroku gem: gem install heroku</li>
+
+<li>Create a new Heroku App: heroku create my_hooks (The app will then be created at http://my_hooks.heroku.com)</li>
+
+<li>Dustin needs three environment variables set up: Your GitHub username, your GitHub API Token (available at <a href="GitHub Account">https://github.com/account</a>) and the repository you want to associate with your TenderApp account.
+
+Set them like this: heroku config:add repo=Mclovin-s-Great-App username=arunthampi token=abcdef</li>
+
+<li>Deploy to heroku: git push heroku master</li>
+
+<li>Goto your TenderApp settings page for webhooks: (E.g. <a href="http://mclovins-great-product.tenderapp.com/settings/webhooks">http://mclovins-great-product.tenderapp.com/settings/webhooks</a>).</li>
+
+<li>Create a new webhook and set the URL to be http://my_hooks.heroku.com/dustin/hook</li>
+
+</ul>
+
+<p>Voila! All discussions categorized as problems, come up as issues on GitHub issues.</p>
+
+<p>You can try this out by creating discussions at <a href="http://mclovins-great-product.tenderapp.com/discussions">http://mclovins-great-product.tenderapp.com/discussions</a> and looking at <a href="http://github.com/arunthampi/Mclovin-s-Great-App/issues#list">http://github.com/arunthampi/Mclovin-s-Great-App/issues#list</a> for the corresponding GitHub issue. [Please note: my TenderApp account is only valid for 30 days from 7-Jan-2010, so no guarantees this will work in future.]</p></p>
+<h2>Authors</h2>
+<p>arunthampi (arun.thampi@gmail.com)<br/><br/>      </p>
+<h2>Contact</h2>
+<p>Arun Thampi (arun.thampi@gmail.com)<br/>      </p>
+
+
+    <h2>Download</h2>
+    <p>
+      You can download this project in either
+      <a href="http://github.com/arunthampi/dustin/zipball/master">zip</a> or
+      <a href="http://github.com/arunthampi/dustin/tarball/master">tar</a> formats.
+    </p>
+    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
+      by running:
+      <pre>$ git clone git://github.com/arunthampi/dustin</pre>
+    </p>
+      
+    <div class="footer">
+      get the source code on GitHub : <a href="http://github.com/arunthampi/dustin">arunthampi/dustin</a>
+    </div>
+    
+  </div>
+
+  
+</body>
+</html>
